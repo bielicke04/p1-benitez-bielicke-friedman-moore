@@ -1,0 +1,268 @@
+@import "variables";
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+    display:block;
+}
+
+
+header{
+  width: 100%;
+  background-color:rgba(255, 255, 255, 0.5);
+  display:inline-flex;
+  padding: 3%
+}
+header img{
+width:100%;
+}
+header .menu{
+  flex-grow: 2;
+}
+.desktop-menu{
+  display: none;
+}
+
+
+li {
+  list-style: none;
+  font-weight: bold;
+}
+
+.wrapper {
+  position: relative;
+ text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+
+}
+
+.hamburger {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  /* text-align: center; */
+  /* margin-left: 30%; */
+}
+
+
+.item {
+  position: relative;
+  transition: 0.3s;
+}
+
+.link {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  color:#081E41;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0;
+  transition: 0.3s 0.1s;
+  z-index: 2;
+}
+
+.link:hover{
+  color: #F26522;
+
+  text-decoration: underline;
+}
+
+
+.slide-in {
+  opacity: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+.fade {
+  opacity: 0.2;
+  transition: 0.3s;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: 0.9s;
+}
+
+.bun_top {
+  transform: translateY(0);
+}
+
+.tomato {
+  transform: translateY(-85%);
+}
+
+.lettuce {
+  transform: translateY(-170%);
+}
+
+.burger {
+  transform: translateY(-260%);
+}
+
+.bun_bottom {
+  transform: translateY(-350%);
+}
+
+.item.bun_top-explode {
+  position: relative;
+  transition: 0.25s;
+  transform: translateY(0);
+}
+
+.item.tomato-explode {
+  position: relative;
+  transition: 0.25s;
+  transform: translateY(0);
+}
+
+.item.lettuce-explode {
+  position: relative;
+  transition: 0.25s;
+  transform: translateY(0);
+}
+
+
+.item.burger-explode {
+  position: relative;
+  transition: 0.25s;
+  transform: translateY(0);
+}
+
+.item.bun_bottom-explode {
+  position: relative;
+  transition: 0.25s;
+  transform: translateY(0);
+}
+
+.bun_top-hover {
+  transform: translateY(5px);
+  position: relative;
+  transition: 0.15s;
+}
+
+.tomato-hover {
+  transform: translateY(-10px);
+  position: relative;
+  transition: 0.15s;
+}
+
+.lettuce-hover {
+  transform: translateY(-25px);
+  position: relative;
+  transition: 0.15s;
+}
+
+
+.burger-hover {
+  transform: translateY(-40px);
+  position: relative;
+  transition: 0.15s;
+}
+
+.bun_bottom-hover {
+  transform: translateY(-50px);
+  position: relative;
+  transition: 0.15s;
+}
+
+
+/* **************************************Desktop MENU STYLES******************************************** */
+.desktop-menu {
+  width:90%;
+  padding: 2% 5%;
+}
+.desktop-menu{
+
+}
+
+.desktop-menu ul {
+		 list-style-type: none;
+     display: inline-flex;
+     width: 100%;
+     align-content: space-around;
+	}
+
+  .desktop-menu ul li {
+		flex:auto;
+    padding-top: 3%
+	}
+
+	.desktop-menu ul li a {
+		 transition: 1s;
+     text-decoration: none;
+     margin: 0 1.5%;
+     font-size: 20px;
+     color:#081E41
+
+	}
+
+	.desktop-menu ul li a:hover {
+    color: #F26522;
+    transition: .2s;
+    list-style: none;
+    text-decoration: underline;
+  }
+
+
+footer{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/*=====================================================Nav===================*/
+
+
+@media (min-width:760px) {
+
+  header img{
+  width:30%;
+  }
+
+  .menu{
+    display: none
+  }
+
+  .desktop-menu {
+  display:flex;
+  flex-direction: row-reverse;
+  }
+
+
+
+
+}
+
+/*=====================================================760px END===============================*/
+
+
+/*=====================================================1000px Start===============================*/
+@media (min-width:1000px) {
+
+  .menu{
+    display: none;
+  }
+
+  .desktop-menu{
+    width:100%;
+  }
+
+
+
+
+}
+
+/*=====================================================1000px END===============================*/
