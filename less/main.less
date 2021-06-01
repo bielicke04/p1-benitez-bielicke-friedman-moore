@@ -11,11 +11,52 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 }
 
 
+// font-family: 'SpongebobFont', 'Sans-Serif';
+// font-family: 'SourceSansBold', 'Sans-Serif';
+// font-family: 'SourceSansRegular', 'Sans-Serif';
+// font-family: 'SourceSansLight', 'Sans-Serif';
+
+@font-face {
+  font-family: 'SpongebobFont';
+  src: url(../Fonts/sponge-bob-font-wide/SpongebobFontCondensedRegular-3zZEy.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'SourceSansBold';
+  src: url(../Fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SourceSansRegular';
+  src: url(../Fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SourceSansLight';
+  src: url(../Fonts/Source_Sans_Pro/SourceSansPro-Light.ttf) format('truetype');
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'SpongebobFont', 'Sans-Serif';
+  letter-spacing: 3px;
+}
+
+p{
+font-family: 'SourceSansLight';
+}
+
 header{
   width: 100%;
   background-color:rgba(255, 255, 255, 0.5);
   display:inline-flex;
   padding: 2% 5%;
+
+  li {
+    list-style: none;
+    font-weight: bold;
+    font-family: 'SpongebobFont', 'Sans-Serif';
+  }
 }
 header img{
 width:100%;
@@ -28,10 +69,7 @@ header .menu{
 }
 
 
-li {
-  list-style: none;
-  font-weight: bold;
-}
+
 
 .wrapper {
   position: relative;
@@ -205,7 +243,7 @@ li {
      text-decoration: none;
      margin: 0 1.5%;
      font-size: 20px;
-     color:#081E41
+     color:@pdarkblue;
 
 	}
 
@@ -255,8 +293,11 @@ li {
         padding: 10px;
         border-radius: 15px;
         background-color: @porange;
-        font-size: 100%;
+        font-size: 110%;
         color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'SpongebobFont', 'Sans-Serif';
     &:hover {
           background-color: white;
           color: @porange;
@@ -293,8 +334,14 @@ background: linear-gradient(180deg, rgba(29,126,166,1) 36%, rgba(28,54,100,1) 84
   margin-bottom:12px;
   font-weight:bold;
   font-size:16px;
-  color:white;
+  color:@pdarkblue;
+  letter-spacing: 3px;
 }
+
+.footer-dark p{
+  color: @lightgray;
+}
+
 
 .footer-dark ul {
   padding:0;
@@ -310,10 +357,12 @@ background: linear-gradient(180deg, rgba(29,126,166,1) 36%, rgba(28,54,100,1) 84
   text-decoration:none;
   opacity:0.6;
   color: white;
+  font-family: 'SourceSansRegular';
 }
 
 .footer-dark ul a:hover {
   opacity:0.8;
+  color: @porange;
 }
 
 @media (max-width:767px) {
