@@ -16,11 +16,43 @@ section,
 summary {
   display: block;
 }
+@font-face {
+  font-family: 'SpongebobFont';
+  src: url(../Fonts/sponge-bob-font-wide/SpongebobFontCondensedRegular-3zZEy.otf) format('opentype');
+}
+@font-face {
+  font-family: 'SourceSansBold';
+  src: url(../Fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SourceSansRegular';
+  src: url(../Fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SourceSansLight';
+  src: url(../Fonts/Source_Sans_Pro/SourceSansPro-Light.ttf) format('truetype');
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'SpongebobFont', 'Sans-Serif';
+}
+p {
+  font-family: 'SourceSansLight';
+}
 header {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   display: inline-flex;
   padding: 2% 5%;
+}
+header li {
+  list-style: none;
+  font-weight: bold;
+  font-family: 'SpongebobFont', 'Sans-Serif';
 }
 header img {
   width: 100%;
@@ -30,10 +62,6 @@ header .menu {
 }
 .desktop-menu {
   display: none;
-}
-li {
-  list-style: none;
-  font-weight: bold;
 }
 .wrapper {
   position: relative;
@@ -214,8 +242,11 @@ li {
   padding: 10px;
   border-radius: 15px;
   background-color: #f26522;
-  font-size: 100%;
+  font-size: 110%;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'SpongebobFont', 'Sans-Serif';
 }
 .middleleft button:hover {
   background-color: white;
@@ -242,7 +273,11 @@ li {
   margin-bottom: 12px;
   font-weight: bold;
   font-size: 16px;
-  color: white;
+  color: #081e41;
+  letter-spacing: 3px;
+}
+.footer-dark p {
+  color: #d6d1c4;
 }
 .footer-dark ul {
   padding: 0;
@@ -257,9 +292,11 @@ li {
   text-decoration: none;
   opacity: 0.6;
   color: white;
+  font-family: 'SourceSansRegular';
 }
 .footer-dark ul a:hover {
   opacity: 0.8;
+  color: #f26522;
 }
 @media (max-width: 767px) {
   .footer-dark .item:not(.social) {
