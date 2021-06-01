@@ -12,10 +12,10 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 
 
 header{
-  width: 100%;
+  width: 90%;
   background-color:rgba(255, 255, 255, 0.5);
   display:inline-flex;
-  padding: 3%
+  padding: 3% 5%;
 }
 header img{
 width:100%;
@@ -185,15 +185,14 @@ li {
   width:90%;
   padding: 2% 5%;
 }
-.desktop-menu{
-
-}
 
 .desktop-menu ul {
 		 list-style-type: none;
      display: inline-flex;
      width: 100%;
      align-content: space-around;
+    text-align: center;
+
 	}
 
   .desktop-menu ul li {
@@ -218,8 +217,67 @@ li {
   }
 
 
-  main{
-    background-image: url('img/krusty-krab-background.png');}
+  .homepg{
+    width: 100%;
+    background-image: url('../img/krusty-krab-background.png') ;
+    // background-size: cover;
+    background-position: -7px 0px;
+    // min-height: 100%;
+  }
+  .home-pg{
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .home-middle{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 60%;
+  }
+  .middleright{
+    width: 60%;
+    overflow: hidden;
+    margin-left: -30%;
+  }
+  .middleleft{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+      img{
+        width: 100%;
+      }
+
+      button {
+        width: 50%;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: @porange;
+        font-size: 100%;
+        color: white;
+    &:hover {
+          background-color: white;
+          color: @porange;
+          border: 3px;
+          border-color: @porange;
+      }
+    }
+  }
+
+
+
+
+  .home-l{
+    width: 40%;
+    margin-top: 5%;
+    img{
+      width: 75%;
+      margin: 10%;
+    }
+  }
+
 /*=====================================================Nav===================*/
 
 
@@ -243,6 +301,32 @@ li {
 
 }
 
+@media (max-width:760px) {
+.home-pg{
+  align-items: center;
+  flex-direction:column-reverse;
+  background-position: -250px 20px;
+}
+
+.home-middle{
+  width:75%;
+
+}
+
+.home-l {
+width: 100%;
+margin-top: 0;
+display: flex;
+justify-content: center;
+  img{
+    width: 30%;
+  }
+}
+
+
+
+}
+
 /*=====================================================760px END===============================*/
 
 
@@ -256,10 +340,18 @@ li {
   .desktop-menu{
     width:100%;
   }
-
-
-
-
 }
 
+
+
+@media (max-width:1000px) {
+
+.middleright{
+  display: none;
+}
+.middleleft{
+  width: 100%;
+}
+
+}
 /*=====================================================1000px END===============================*/

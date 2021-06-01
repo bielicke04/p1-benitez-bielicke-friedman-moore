@@ -17,10 +17,10 @@ summary {
   display: block;
 }
 header {
-  width: 100%;
+  width: 90%;
   background-color: rgba(255, 255, 255, 0.5);
   display: inline-flex;
-  padding: 3%;
+  padding: 3% 5%;
 }
 header img {
   width: 100%;
@@ -162,6 +162,7 @@ li {
   display: inline-flex;
   width: 100%;
   align-content: space-around;
+  text-align: center;
 }
 .desktop-menu ul li {
   flex: auto;
@@ -180,8 +181,55 @@ li {
   list-style: none;
   text-decoration: underline;
 }
-main {
-  background-image: url('img/krusty-krab-background.png');
+.homepg {
+  width: 100%;
+  background-image: url('../img/krusty-krab-background.png');
+  background-position: -7px 0px;
+}
+.home-pg {
+  display: flex;
+  flex-direction: row;
+}
+.home-middle {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 60%;
+}
+.middleright {
+  width: 60%;
+  overflow: hidden;
+  margin-left: -30%;
+}
+.middleleft {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.middleleft img {
+  width: 100%;
+}
+.middleleft button {
+  width: 50%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #f26522;
+  font-size: 100%;
+  color: white;
+}
+.middleleft button:hover {
+  background-color: white;
+  color: #f26522;
+  border: 3px;
+  border-color: #f26522;
+}
+.home-l {
+  width: 40%;
+  margin-top: 5%;
+}
+.home-l img {
+  width: 75%;
+  margin: 10%;
 }
 /*=====================================================Nav===================*/
 @media (min-width: 760px) {
@@ -196,6 +244,25 @@ main {
     flex-direction: row-reverse;
   }
 }
+@media (max-width: 760px) {
+  .home-pg {
+    align-items: center;
+    flex-direction: column-reverse;
+    background-position: -250px 20px;
+  }
+  .home-middle {
+    width: 75%;
+  }
+  .home-l {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .home-l img {
+    width: 30%;
+  }
+}
 /*=====================================================760px END===============================*/
 /*=====================================================1000px Start===============================*/
 @media (min-width: 1000px) {
@@ -203,6 +270,14 @@ main {
     display: none;
   }
   .desktop-menu {
+    width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .middleright {
+    display: none;
+  }
+  .middleleft {
     width: 100%;
   }
 }
