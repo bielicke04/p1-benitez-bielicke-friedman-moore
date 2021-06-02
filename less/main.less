@@ -10,6 +10,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
     display:block;
 }
 
+/************* fonts universal styling *************/
 
 // font-family: 'SpongebobFont', 'Sans-Serif';
 // font-family: 'SourceSansBold', 'Sans-Serif';
@@ -46,9 +47,13 @@ p {
   font-family: 'SourceSansLight';
 }
 
+
+/************* header *************/
+
 header {
+  position: fixed;
   width: 100%;
-  background-color:rgba(255, 255, 255, 0.5);
+  background: @whitetrans;
   display:inline-flex;
   padding: 2% 5%;
 
@@ -61,7 +66,9 @@ header {
 
 header img{
 width:100%;
+z-index: 10;
 }
+
 header .menu{
   flex-grow: 2;
 }
@@ -76,6 +83,9 @@ header .menu{
   width: 100%;
   height: 45px;
 }
+
+
+/************* hamburger *************/
 
 .hamburger {
   margin: 0 auto;
@@ -201,7 +211,6 @@ header .menu{
   transition: 0.15s;
 }
 
-
 .burger-hover {
   transform: translateY(-40px);
   position: relative;
@@ -322,15 +331,14 @@ header .menu{
 }
 
 .patrick img {
-  width: 30%;
+  width: 130%;
 }
 
 .patstar h1 {
   color: @pyellow;
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   text-align: center;
   text-shadow: 1px 2px 12px @pdarkblue;
-  margin-top: 65px;
 }
 
 .patstar p {
@@ -342,7 +350,7 @@ header .menu{
 }
 
 .patstar img {
-  width: 5%;
+  width: 3%;
 }
 
 .patstar a {
@@ -351,7 +359,7 @@ header .menu{
   font-family: 'SpongebobFont', 'Sans-Serif';
   font-size: 1.5rem;
   letter-spacing: .5px;
-  border: 1.5px solid @porange;
+  border: 2.25px solid @porange;
   border-radius: 4.5px;
   padding: 9px 2.5% 3px;
 }
