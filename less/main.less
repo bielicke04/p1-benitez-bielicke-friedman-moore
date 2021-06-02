@@ -1,4 +1,4 @@
-@import "variables";
+@import "./variables";
 
 *{
   margin: 0;
@@ -42,11 +42,11 @@ h1, h2, h3, h4, h5, h6{
   letter-spacing: 3px;
 }
 
-p{
-font-family: 'SourceSansLight';
+p {
+  font-family: 'SourceSansLight';
 }
 
-header{
+header {
   width: 100%;
   background-color:rgba(255, 255, 255, 0.5);
   display:inline-flex;
@@ -58,6 +58,7 @@ header{
     font-family: 'SpongebobFont', 'Sans-Serif';
   }
 }
+
 header img{
 width:100%;
 }
@@ -68,16 +69,12 @@ header .menu{
   display: none;
 }
 
-
-
-
 .wrapper {
   position: relative;
- text-align: center;
+  text-align: center;
   display: inline-block;
   width: 100%;
   height: 45px;
-
 }
 
 .hamburger {
@@ -102,7 +99,7 @@ header .menu{
   left: 20%;
   top: 50%;
   transform: translateY(-50%);
-  color:#081E41;
+  color: @pdarkblue;
   text-decoration: none;
   font-size: 16px;
   opacity: 0;
@@ -111,7 +108,7 @@ header .menu{
 }
 
 .link:hover{
-  color: #F26522;
+  color: @porange;
 
   text-decoration: underline;
 }
@@ -219,21 +216,21 @@ header .menu{
 
 
 /* **************************************Desktop MENU STYLES******************************************** */
+
 .desktop-menu {
-  width:90%;
-  padding: 2% 5%;
+    width: 90%;
+    padding: 2% 5%;
 }
 
 .desktop-menu ul {
-		 list-style-type: none;
-     display: inline-flex;
-     width: 100%;
-     align-content: space-around;
+    list-style-type: none;
+    display: inline-flex;
+    width: 100%;
+    align-content: space-around;
     text-align: center;
-
 	}
 
-  .desktop-menu ul li {
+.desktop-menu ul li {
 		flex:auto;
     padding-top: 3%
 	}
@@ -244,24 +241,24 @@ header .menu{
      margin: 0 1.5%;
      font-size: 20px;
      color:@pdarkblue;
-
 	}
 
 	.desktop-menu ul li a:hover {
-    color: #F26522;
+    color: @porange;
     transition: .2s;
     list-style: none;
     text-decoration: underline;
   }
 
 
-  .homepg{
+  .homepg {
     width: 100%;
-    background-image: url('../img/krusty-krab-background.png') ;
+    background-image: url('../img/krusty-krab-background.png');
     // background-size: cover;
     background-position: -7px 0px;
     // min-height: 100%;
   }
+
   .home-pg{
     display: flex;
     flex-direction: row;
@@ -307,9 +304,6 @@ header .menu{
     }
   }
 
-
-
-
   .home-l{
     width: 40%;
     margin-top: 5%;
@@ -319,22 +313,67 @@ header .menu{
     }
   }
 
+/************* Careers Page *************/
+
+
+.careerspg {
+  background: url('../img/careers-background.png') no-repeat center center/cover;
+  height: 100vh;
+}
+
+.patrick img {
+  width: 30%;
+}
+
+.patstar h1 {
+  color: @pyellow;
+  font-size: 5.5rem;
+  text-align: center;
+  text-shadow: 1px 2px 12px @pdarkblue;
+  margin-top: 65px;
+}
+
+.patstar p {
+  color: @white;
+  font-size: 1.25rem;
+  text-align: center;
+  text-shadow: 2px 2px 8px @pdarkblue;
+  letter-spacing: .5px;
+}
+
+.patstar img {
+  width: 5%;
+}
+
+.patstar a {
+  background: @white;
+  color: @porange;
+  font-family: 'SpongebobFont', 'Sans-Serif';
+  font-size: 1.5rem;
+  letter-spacing: .5px;
+  border: 1.5px solid @porange;
+  border-radius: 4.5px;
+  padding: 9px 2.5% 3px;
+}
+
+
+
 
 
 /*=====================================================Footer===================*/
 
   .footer-dark {
   padding:50px 0;
- background: rgb(29,126,166);
-background: linear-gradient(180deg, rgba(29,126,166,1) 36%, rgba(28,54,100,1) 84%);
+ background: @dblue;
+background: linear-gradient(180deg, @dblue 36%, @pdarkblue 84%);
 }
 
 .footer-dark h3 {
   margin-top:0;
-  margin-bottom:12px;
-  font-weight:bold;
-  font-size:16px;
-  color:@pdarkblue;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  color: @pdarkblue;
   letter-spacing: 3px;
 }
 
@@ -344,19 +383,19 @@ background: linear-gradient(180deg, rgba(29,126,166,1) 36%, rgba(28,54,100,1) 84
 
 
 .footer-dark ul {
-  padding:0;
-  list-style:none;
-  line-height:1.6;
-  font-size:14px;
-  margin-bottom:0;
-  color: white;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: @white;
 }
 
 .footer-dark ul a {
   color:inherit;
   text-decoration:none;
   opacity:0.6;
-  color: white;
+  color: @white;
   font-family: 'SourceSansRegular';
 }
 
@@ -408,7 +447,7 @@ background: linear-gradient(180deg, rgba(29,126,166,1) 36%, rgba(28,54,100,1) 84
   border-radius:50%;
   box-shadow:0 0 0 1px rgba(255,255,255,0.4);
   margin:0 8px;
-  color:#fff;
+  color: @white;
   opacity:0.75;
 }
 
@@ -422,7 +461,7 @@ background: linear-gradient(180deg, rgba(29,126,166,1) 36%, rgba(28,54,100,1) 84
   opacity:0.3;
   font-size:13px;
   margin-bottom:0;
-  color:white;
+  color: @white;
 }
 
 /*=====================================================Media Query===================*/
