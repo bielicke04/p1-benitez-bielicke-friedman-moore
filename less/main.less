@@ -1,15 +1,18 @@
-@import "variables";
+@import "./variables";
+@import "./mixins";
 
-*{
+* {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
+
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
-    display:block;
+  display:block;
 }
 
+/************* fonts universal styling *************/
 
 // font-family: 'SpongebobFont', 'Sans-Serif';
 // font-family: 'SourceSansBold', 'Sans-Serif';
@@ -38,17 +41,20 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 
 
 h1, h2, h3, h4, h5, h6{
-  font-family: 'SpongebobFont', 'Sans-Serif';
-  letter-spacing: 3px;
+  .styling();
 }
 
-p{
-font-family: 'SourceSansLight';
+p {
+  .styling2();
 }
 
-header{
+
+/************* header *************/
+
+header {
+  position: fixed;
   width: 100%;
-  background-color:rgba(255, 255, 255, 0.5);
+  background: @whitetrans;
   display:inline-flex;
   padding: 2% 5%;
 
@@ -57,28 +63,31 @@ header{
     font-weight: bold;
     font-family: 'SpongebobFont', 'Sans-Serif';
   }
+
+  img {
+    width:100%;
+    z-index: 10;
+  }
+
+  .menu {
+    flex-grow: 2;
+  }
 }
-header img{
-width:100%;
-}
-header .menu{
-  flex-grow: 2;
-}
+
 .desktop-menu{
   display: none;
 }
 
-
-
-
 .wrapper {
   position: relative;
- text-align: center;
+  text-align: center;
   display: inline-block;
   width: 100%;
   height: 45px;
-
 }
+
+
+/************* hamburger *************/
 
 .hamburger {
   margin: 0 auto;
@@ -87,8 +96,6 @@ header .menu{
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  /* text-align: center; */
-  /* margin-left: 30%; */
 }
 
 
@@ -102,7 +109,7 @@ header .menu{
   left: 20%;
   top: 50%;
   transform: translateY(-50%);
-  color:#081E41;
+  color: @pdarkblue;
   text-decoration: none;
   font-size: 16px;
   opacity: 0;
@@ -111,8 +118,7 @@ header .menu{
 }
 
 .link:hover{
-  color: #F26522;
-
+  color: @porange;
   text-decoration: underline;
 }
 
@@ -156,112 +162,90 @@ header .menu{
 }
 
 .item.bun_top-explode {
-  position: relative;
-  transition: 0.25s;
-  transform: translateY(0);
+  .postrans();
 }
 
 .item.tomato-explode {
-  position: relative;
-  transition: 0.25s;
-  transform: translateY(0);
+  .postrans();
 }
 
 .item.lettuce-explode {
-  position: relative;
-  transition: 0.25s;
-  transform: translateY(0);
+  .postrans();
 }
 
-
 .item.burger-explode {
-  position: relative;
-  transition: 0.25s;
-  transform: translateY(0);
+  .postrans();
 }
 
 .item.bun_bottom-explode {
-  position: relative;
-  transition: 0.25s;
-  transform: translateY(0);
+  .postrans();
 }
 
 .bun_top-hover {
   transform: translateY(5px);
-  position: relative;
-  transition: 0.15s;
+  .postrans2();
 }
 
 .tomato-hover {
   transform: translateY(-10px);
-  position: relative;
-  transition: 0.15s;
+  .postrans2();
 }
 
 .lettuce-hover {
   transform: translateY(-25px);
-  position: relative;
-  transition: 0.15s;
+  .postrans2();
 }
-
 
 .burger-hover {
   transform: translateY(-40px);
-  position: relative;
-  transition: 0.15s;
+  .postrans2();
 }
 
 .bun_bottom-hover {
   transform: translateY(-50px);
-  position: relative;
-  transition: 0.15s;
+  .postrans2();
 }
 
 
 /* **************************************Desktop MENU STYLES******************************************** */
+
 .desktop-menu {
-  width:90%;
-  padding: 2% 5%;
-}
-
-.desktop-menu ul {
-		 list-style-type: none;
-     display: inline-flex;
-     width: 100%;
-     align-content: space-around;
+    width: 90%;
+    padding: 2% 5%;
+  ul {
+    list-style-type: none;
+    display: inline-flex;
+    width: 100%;
+    align-content: space-around;
     text-align: center;
-
-	}
-
-  .desktop-menu ul li {
+  }
+  ul li {
 		flex:auto;
     padding-top: 3%
 	}
-
-	.desktop-menu ul li a {
-		 transition: 1s;
-     text-decoration: none;
-     margin: 0 1.5%;
-     font-size: 20px;
-     color:@pdarkblue;
-
-	}
+  ul li a {
+    transition: 1s;
+    text-decoration: none;
+    margin: 0 1.5%;
+    font-size: 20px;
+    color:@pdarkblue;
+ }
+}
 
 	.desktop-menu ul li a:hover {
-    color: #F26522;
+    color: @porange;
     transition: .2s;
     list-style: none;
     text-decoration: underline;
   }
 
 
-  .homepg{
+  .homepg {
     width: 100%;
-    background-image: url('../img/krusty-krab-background.png') ;
-    // background-size: cover;
+    background-image: url('../img/krusty-krab-background.png');
     background-position: -7px 0px;
-    // min-height: 100%;
   }
+
   .home-pg{
     display: flex;
     flex-direction: row;
@@ -269,15 +253,16 @@ header .menu{
   }
 
   .home-middle{
-    display: flex;
-    flex-direction: row-reverse;
+    .flex1();
     width: 60%;
   }
+
   .middleright{
     width: 60%;
     overflow: hidden;
     margin-left: -30%;
   }
+
   .middleleft{
     width: 70%;
     display: flex;
@@ -294,21 +279,18 @@ header .menu{
         border-radius: 15px;
         background-color: @porange;
         font-size: 110%;
-        color: white;
+        color: @white;
         text-transform: uppercase;
         letter-spacing: 2px;
         font-family: 'SpongebobFont', 'Sans-Serif';
-    &:hover {
-          background-color: white;
-          color: @porange;
-          border: 3px;
-          border-color: @porange;
+      &:hover {
+        background-color: @white;
+        color: @porange;
+        border: 3px;
+        border-color: @porange;
       }
     }
   }
-
-
-
 
   .home-l{
     width: 40%;
@@ -320,44 +302,117 @@ header .menu{
   }
 
 
+/************* Careers Page *************/
+
+.careerspg {
+  background: url('../img/careers-background.png') no-repeat center center/cover;
+  height: 100vh;
+}
+
+.patrick img {
+  width: 110%;
+  margin-top: 40px;
+  margin-left: -70px;
+}
+
+.patstar h1 {
+  color: @pyellow;
+  font-size: 5.5rem;
+  text-align: center;
+  text-shadow: 1px 2px 12px @pdarkblue;
+}
+
+.patstar p {
+  color: @white;
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 8px @pdarkblue;
+  letter-spacing: .5px;
+  margin: 7px 0 24px;
+}
+
+.patstar img {
+  width: 15%;
+  margin-top: -54px;
+}
+
+.patstar a {
+  background: @white;
+  color: @porange;
+  font-family: 'SpongebobFont', 'Sans-Serif';
+  font-size: 1.5rem;
+  letter-spacing: .5px;
+  border: 2.25px solid @porange;
+  border-radius: 4.5px;
+  padding: 9px 2.5% 3px;
+}
+
+.middleleft button {
+  width: 78%;
+  padding: 11px 7px 5px 15px;
+  border-radius: 7px;
+  background-color: @porange;
+  font-size: 125%;
+  color: @white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'SpongebobFont','Sans-Serif';
+  margin-top: 6px;
+}
+
 
 /*=====================================================Footer===================*/
 
-  .footer-dark {
+.footer-dark {
   padding:50px 0;
- background: rgb(29,126,166);
-background: linear-gradient(180deg, rgba(29,126,166,1) 36%, rgba(28,54,100,1) 84%);
-}
+  background: @dblue;
+  background: linear-gradient(180deg, @dblue 36%, @pdarkblue 84%);
+  height: 50vh;
 
-.footer-dark h3 {
-  margin-top:0;
-  margin-bottom:12px;
-  font-weight:bold;
-  font-size:16px;
-  color:@pdarkblue;
-  letter-spacing: 3px;
-}
-
-.footer-dark p{
-  color: @lightgray;
-}
-
-
-.footer-dark ul {
-  padding:0;
-  list-style:none;
-  line-height:1.6;
-  font-size:14px;
-  margin-bottom:0;
-  color: white;
-}
-
-.footer-dark ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.6;
-  color: white;
-  font-family: 'SourceSansRegular';
+  h3 {
+    margin-top:0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    color: @pdarkblue;
+    letter-spacing: 3px;
+  }
+  p {
+    color: @lightgray;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+    color: @white;
+  }
+  ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+    color: @white;
+    font-family: 'SourceSansRegular';
+  }
+  .item.text {
+    margin-bottom:36px;
+  }
+  .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  .item.social {
+    text-align:center;
+  }
+  .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+    color: @white;
+  }
 }
 
 .footer-dark ul a:hover {
@@ -372,23 +427,10 @@ background: linear-gradient(180deg, rgba(29,126,166,1) 36%, rgba(28,54,100,1) 84
   }
 }
 
-.footer-dark .item.text {
-  margin-bottom:36px;
-}
-
 @media (max-width:767px) {
   .footer-dark .item.text {
     margin-bottom:0;
   }
-}
-
-.footer-dark .item.text p {
-  opacity:0.6;
-  margin-bottom:0;
-}
-
-.footer-dark .item.social {
-  text-align:center;
 }
 
 @media (max-width:991px) {
@@ -406,9 +448,9 @@ background: linear-gradient(180deg, rgba(29,126,166,1) 36%, rgba(28,54,100,1) 84
   display:inline-block;
   text-align:center;
   border-radius:50%;
-  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  box-shadow:0 0 0 1px @shadowcolor;
   margin:0 8px;
-  color:#fff;
+  color: @white;
   opacity:0.75;
 }
 
@@ -416,65 +458,23 @@ background: linear-gradient(180deg, rgba(29,126,166,1) 36%, rgba(28,54,100,1) 84
   opacity:0.9;
 }
 
-.footer-dark .copyright {
-  text-align:center;
-  padding-top:24px;
-  opacity:0.3;
-  font-size:13px;
-  margin-bottom:0;
-  color:white;
-}
 
 /*=====================================================Media Query===================*/
 
+/************* Media Query 1200px *************/
 
-@media (min-width:760px) {
-
-  header img{
-  width:30%;
+@media (max-width:1200px) {
+  #header {
+    margin-top: -60px;
   }
 
-  .menu{
-    display: none
-  }
-
-  .desktop-menu {
-  display:flex;
-  flex-direction: row-reverse;
-  }
-
-
-
-
-}
-
-@media (max-width:760px) {
-.home-pg{
-  align-items: center;
-  flex-direction:column-reverse;
-  background-position: -250px 20px;
-}
-
-.home-middle{
-  width:75%;
-
-}
-
-.home-l {
-width: 100%;
-margin-top: 0;
-display: flex;
-justify-content: center;
-  img{
-    width: 30%;
+  #careerwrap {
+    margin-top: 60px;
   }
 }
-}
 
-/*=====================================================760px END===============================*/
+/************* Media Query 1000px *************/
 
-
-/*=====================================================1000px Start===============================*/
 @media (min-width:1000px) {
 
   .menu{
@@ -486,16 +486,202 @@ justify-content: center;
   }
 }
 
-
-
 @media (max-width:1000px) {
 
-.middleright{
-  display: none;
-}
-.middleleft{
-  width: 100%;
+  .middleright{
+    display: none;
+  }
+
+  .middleleft{
+    width: 100%;
+  }
+
+  #header {
+    margin-top: -140px;
+  }
+
+  #careerwrap {
+    margin-top: 140px;
+  }
+ 
+  .patrick img {
+    margin-left: 0px;
+  }
 }
 
+/************* Media Query 760px *************/
+
+@media (min-width:760px) {
+
+  header img {
+    width:30%;
+  }
+
+  .menu{
+    display: none
+  }
+
+  .desktop-menu {
+    .flex1();
+  }
 }
-/*=====================================================1000px END===============================*/
+
+@media (max-width:760px) {
+  .home-pg {
+    align-items: center;
+    flex-direction:column-reverse;
+    background-position: -250px 20px;
+}
+
+  .home-middle{
+    width:75%;
+}
+
+  .home-l {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 30%;
+    }
+  }
+
+  #header {
+    margin-top: -145px;
+  }
+
+  #careerwrap {
+    margin-top: 145px;
+  }
+
+  .patrick img {
+    width: 180%;
+    margin-top: 2px;
+    margin-left: -25px;
+  }
+
+  .patstar h1 {
+    font-size: 5rem;
+    line-height: 100px;
+  }
+
+  .patstar p {
+    font-size: 1.25rem;
+    line-height: 27px;
+  }
+
+  .patstar img {
+    width: 14%;
+    margin-top: -70px;
+  }
+
+  .middleleft button {
+    width: 65%;
+  }
+
+  .wrapper {
+    width: 275%;
+    text-align: left;
+    margin-top: 40px;
+    padding-left: 20%;
+  }
+}
+
+  /************* Media Query 570px *************/
+
+  @media (max-width:570px) {
+
+    .wrapper {
+      width: 350%;
+      text-align: left;
+      margin-top: 30px;
+      padding-left: 15%;
+    }
+
+    #header {
+      margin-top: -110px;
+    }
+  
+    #careerwrap {
+      margin-top: 110px;
+    }
+
+    .patrick img {
+      width: 140%;
+      margin-top: 2px;
+      margin-left: -30px;
+    }
+  
+    .patstar h1 {
+      font-size: 4rem;
+      line-height: 80px;
+    }
+  
+    .patstar p {
+      font-size: 1.15rem;
+      line-height: 26px;
+    }
+  
+    .patstar img {
+      width: 15%;
+      margin-top: -84px;
+    }
+
+    .middleleft button {
+      width: 65%;
+      font-size: 1rem;
+    }
+
+    #careerwrap {
+      margin-left: 5%;
+    }
+
+    .footer-dark {
+      height: 80vh;
+    }
+  }
+
+  /************* Media Query 500px *************/
+
+    @media (max-width:500px) {
+
+      #header {
+        margin-top: -130px;
+      }
+
+      #header img {
+        width: 80%;
+      }
+    
+      #careerwrap {
+        margin: 130px 2% 0;
+      }
+
+      .patstar h1 {
+        margin-top: 5px;
+        font-size: 3.5rem;
+      }
+
+      .patstar p {
+        font-size: 1.25rem;
+        line-height: 26px;
+      }
+
+      .patrick {
+        text-align: center;
+      }
+
+      .patrick img {
+        width: 65%;
+      }
+
+      .row {
+        flex-direction: column;
+      }
+    }
+
+    /************* END Media Queries *************/
+  
+
+
