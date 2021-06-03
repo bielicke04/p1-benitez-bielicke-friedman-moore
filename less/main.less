@@ -57,198 +57,37 @@ header {
   background: @whitetrans;
   display:inline-flex;
   padding: 2% 5%;
+  background: rgba(255, 255, 255, 0.5);
 
-  li {
-    list-style: none;
-    font-weight: bold;
-    font-family: 'SpongebobFont', 'Sans-Serif';
-  }
-
-  img {
-    width:100%;
-    z-index: 10;
-  }
-
-  .menu {
-    flex-grow: 2;
+  img{
+    width: 50%;
   }
 }
 
-.desktop-menu{
-  display: none;
+@media (min-width: 992px) {
+.navbar-toggleable-md .navbar-collapse {
+padding-left: 30%;
+}
 }
 
-.wrapper {
-  position: relative;
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-  height: 45px;
+.navbar-inverse,
+.navbar-nav,
+.nav-link a {
+color: cmyk(100%, 79%, 0%, 71%);
 }
-
-
-/************* hamburger *************/
-
-.hamburger {
-  margin: 0 auto;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-
-.item {
-  position: relative;
-  transition: 0.3s;
-}
-
-.link {
-  position: absolute;
-  left: 20%;
-  top: 50%;
-  transform: translateY(-50%);
-  color: @pdarkblue;
-  text-decoration: none;
-  font-size: 16px;
-  opacity: 0;
-  transition: 0.3s 0.1s;
-  z-index: 2;
-}
-
-.link:hover{
-  color: @porange;
-  text-decoration: underline;
-}
-
-
-.slide-in {
-  opacity: 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.3s;
-}
-
-.fade {
-  opacity: 0.2;
-  transition: 0.3s;
-}
-
-.fade-out {
-  opacity: 0;
-  transition: 0.9s;
-}
-
-.bun_top {
-  transform: translateY(0);
-}
-
-.tomato {
-  transform: translateY(-85%);
-}
-
-.lettuce {
-  transform: translateY(-170%);
-}
-
-.burger {
-  transform: translateY(-260%);
-}
-
-.bun_bottom {
-  transform: translateY(-350%);
-}
-
-.item.bun_top-explode {
-  .postrans();
-}
-
-.item.tomato-explode {
-  .postrans();
-}
-
-.item.lettuce-explode {
-  .postrans();
-}
-
-.item.burger-explode {
-  .postrans();
-}
-
-.item.bun_bottom-explode {
-  .postrans();
-}
-
-.bun_top-hover {
-  transform: translateY(5px);
-  .postrans2();
-}
-
-.tomato-hover {
-  transform: translateY(-10px);
-  .postrans2();
-}
-
-.lettuce-hover {
-  transform: translateY(-25px);
-  .postrans2();
-}
-
-.burger-hover {
-  transform: translateY(-40px);
-  .postrans2();
-}
-
-.bun_bottom-hover {
-  transform: translateY(-50px);
-  .postrans2();
-}
-
-
-/* **************************************Desktop MENU STYLES******************************************** */
-
-.desktop-menu {
-    width: 90%;
-    padding: 2% 5%;
-  ul {
-    list-style-type: none;
-    display: inline-flex;
-    width: 100%;
-    align-content: space-around;
-    text-align: center;
-  }
-  ul li {
-		flex:auto;
-    padding-top: 3%
-	}
-  ul li a {
-    transition: 1s;
-    text-decoration: none;
-    margin: 0 1.5%;
-    font-size: 20px;
-    color:@pdarkblue;
- }
-}
-
-	.desktop-menu ul li a:hover {
-    color: @porange;
-    transition: .2s;
-    list-style: none;
-    text-decoration: underline;
-  }
 
 
   .homepg {
     width: 100%;
     background-image: url('../img/krusty-krab-background.png');
     background-position: -7px 0px;
+    background-size: cover;
   }
 
   .home-pg{
     display: flex;
     flex-direction: row;
+    padding-top: 15%;
 
   }
 
@@ -503,7 +342,7 @@ header {
   #careerwrap {
     margin-top: 140px;
   }
- 
+
   .patrick img {
     margin-left: 0px;
   }
@@ -513,17 +352,8 @@ header {
 
 @media (min-width:760px) {
 
-  header img {
-    width:30%;
-  }
 
-  .menu{
-    display: none
-  }
 
-  .desktop-menu {
-    .flex1();
-  }
 }
 
 @media (max-width:760px) {
@@ -547,9 +377,6 @@ header {
     }
   }
 
-  #header {
-    margin-top: -145px;
-  }
 
   #careerwrap {
     margin-top: 145px;
@@ -592,17 +419,8 @@ header {
 
   @media (max-width:570px) {
 
-    .wrapper {
-      width: 350%;
-      text-align: left;
-      margin-top: 30px;
-      padding-left: 15%;
-    }
 
-    #header {
-      margin-top: -110px;
-    }
-  
+
     #careerwrap {
       margin-top: 110px;
     }
@@ -612,17 +430,17 @@ header {
       margin-top: 2px;
       margin-left: -30px;
     }
-  
+
     .patstar h1 {
       font-size: 4rem;
       line-height: 80px;
     }
-  
+
     .patstar p {
       font-size: 1.15rem;
       line-height: 26px;
     }
-  
+
     .patstar img {
       width: 15%;
       margin-top: -84px;
@@ -646,14 +464,6 @@ header {
 
     @media (max-width:500px) {
 
-      #header {
-        margin-top: -130px;
-      }
-
-      #header img {
-        width: 80%;
-      }
-    
       #careerwrap {
         margin: 130px 2% 0;
       }
@@ -682,6 +492,3 @@ header {
     }
 
     /************* END Media Queries *************/
-  
-
-
