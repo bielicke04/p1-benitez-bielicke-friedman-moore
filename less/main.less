@@ -51,7 +51,7 @@ p {
 
 /************* header *************/
 
-header {
+/*header {
   position: fixed;
   width: 100%;
   background: @whitetrans;
@@ -70,10 +70,36 @@ padding-left: 30%;
 }
 }
 
-.navbar-inverse,
+/*.navbar-inverse,
 .navbar-nav,
 .nav-link a {
 color: cmyk(100%, 79%, 0%, 71%);
+}
+
+.clamlogo {
+  width: 20%;
+}*/
+
+.navbar-nav a {
+  font-family: 'SourceSansRegular', 'Sans-Serif';
+  color: @sdarkblue;
+  font-size: 1.28rem;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+
+a#pipe.nav-item.nav-link {
+  font-family: 'SourceSansLight', 'Sans-Serif';
+  color: @white;
+  font-size: 1.28rem;
+}
+
+.navbar-nav a:hover {
+  font-family: 'SourceSansRegular', 'Sans-Serif';
+  color: @sorange;
+  font-size: 1.28rem;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
 }
 
 
@@ -327,6 +353,11 @@ color: cmyk(100%, 79%, 0%, 71%);
 
 @media (max-width:1000px) {
 
+  .home-pg {
+    padding-top: 16%;
+    margin-bottom: 40px;
+  }
+
   .middleright{
     display: none;
   }
@@ -348,13 +379,34 @@ color: cmyk(100%, 79%, 0%, 71%);
   }
 }
 
+/************* Media Query 980px *************/
+
+@media (max-width:980px) {
+.navbar-nav a {
+  font-family: 'SourceSansRegular', 'Sans-Serif';
+  color: @sdarkblue;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a#pipe.nav-item.nav-link {
+  font-family: 'SourceSansLight', 'Sans-Serif';
+  color: @white;
+  font-size: 1rem;
+}
+
+.navbar-nav a:hover {
+  font-family: 'SourceSansRegular', 'Sans-Serif';
+  color: @sorange;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+}
+
 /************* Media Query 760px *************/
 
-@media (min-width:760px) {
-
-
-
-}
 
 @media (max-width:760px) {
   .home-pg {
@@ -365,6 +417,7 @@ color: cmyk(100%, 79%, 0%, 71%);
 
   .home-middle{
     width:75%;
+    margin-top: 40px;
 }
 
   .home-l {
@@ -418,8 +471,6 @@ color: cmyk(100%, 79%, 0%, 71%);
   /************* Media Query 570px *************/
 
   @media (max-width:570px) {
-
-
 
     #careerwrap {
       margin-top: 110px;

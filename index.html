@@ -2,31 +2,77 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>The Krusty Krab</title>
 
     <!--favicon-->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap 4 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+    <!-- Bootstrap 5 CSS -->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">-->
+    
+    <link rel="stylesheet" href="css/main.css">
+  
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    
+
+   
 
   </head>
 
-
-
   <body class="homepg">
+    
     <header>
 
-      <nav class="navbar navbar-toggleable-md navbar-inverse">
+      
+
+      <!-- NavBar - LinkedIn -->
+
+      <nav class="navbar fixed-top navbar-expand-md" style="background-color: #ffffffe0;">
+          <div class="container">
+
+            <a class="navbar-brand" href="#">
+              <img src="../img/logo-shell-horiz.png" alt="" width="400" height="130">
+            </a>
+
+            <!--<a href="#" class="navbar-brand">The Krusty Krab</a>-->
+
+            <button class="navbar-toggler" type="button"
+              data-toggle="collapse" data-target="#myTogglerNav"
+              aria-controls="myTogglerNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+
+            <div class="collapse navbar-collapse" id="myTogglerNav">
+              <div class="navbar-nav ms-auto">
+                <a class="nav-item nav-link active" href="index.html">Home</a>
+                <a id="pipe" class="nav-item nav-link" >|</a>
+                <a class="nav-item nav-link" href="crew.html">Crew</a>
+                <a id="pipe" class="nav-item nav-link" >|</a>
+                <a class="nav-item nav-link" href="careers.html">Careers</a>
+                <a id="pipe" class="nav-item nav-link" >|</a>
+                <a class="nav-item nav-link" href="contact.html">Contact</a>
+              </div>
+            </div>
+          </div>
+      </nav>
+
+      
+      <!--<nav class="navbar navbar-toggleable-md navbar-inverse">
         <div class="container">
           <button class="navbar-toggler" data-bs-toggle="col">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <img src="/Users/DavidFriedman/Documents/School/UF/Web Design /p1-benitez-bielicke-friedman-moore/img/horz.png" alt="logo" title="logo">
+          <img src="../img/clam-logo.png" alt="logo" title="logo">
 
           <div class="collapse navbar-collapse" id="navbarToggleExternalContent
           ">
@@ -39,7 +85,7 @@
            </div>
           </div>
         </div>
-      </nav>
+      </nav>-->
 
     </header>
 
@@ -65,7 +111,7 @@
 
 
     </main>
-
+    
     <!-- Footer -->
     <div class="footer-dark">
         <footer>
@@ -103,7 +149,14 @@
         </footer>
     </div>
 
+    
+
+  <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>-->
+  
   <script src="js/nav.js" charset="utf-8"></script>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
   </body>
 </html>
