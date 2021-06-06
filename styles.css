@@ -165,7 +165,6 @@ span {
 
 .address {
     display: block;
-    margin-top: -10px;
 }
 
 
@@ -455,7 +454,7 @@ span {
 
     .contact-arrow {
         width: 15%;
-        margin-top: -20px;
+        margin-top: -30px;
     }
 }
 
@@ -464,7 +463,7 @@ span {
 
 
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767px) {
     .gallery-grub-text, .stop-by, .submit-order {
         font-size: 3.5em;
     }
@@ -504,22 +503,20 @@ span {
 
     .contact-arrow {
         width: 15%;
-        margin-top: -30px;
+        margin-top: -40px;
     }
 }
 
 
 
 @media (min-width: 700px){
-  
     .map-img{
         width: 100%;
     }
 }
 
-    @media (min-width: 768px) and (max-width: 950px) {
+@media (min-width: 768px) and (max-width: 950px) {
     
-
     .menu-text {
          font-size: 1.2em;
     }
@@ -580,7 +577,6 @@ span {
         margin: 0 auto 0 25px;
     }
     
-
     .contact-arrow {
         overflow: hidden;
         margin-top: 10px;
@@ -589,8 +585,7 @@ span {
     .stop-by, .submit-order {
         font-size: 2em;
     }
-
-    
+ 
     .or {
         transform: rotate(-10deg);
         font-size: 1.5em;
@@ -616,7 +611,6 @@ span {
         justify-content: center;
         align-items: center;
         padding-top: 150px;
-    }
 }
 
 @media (min-width: 950px) {
@@ -641,6 +635,10 @@ span {
 
     .contact-arrow {
         margin-top: 20px;
+    }
+
+    .address p {
+        font-size: 1em;
     }
 
 }
