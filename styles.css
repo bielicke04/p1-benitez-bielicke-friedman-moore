@@ -61,7 +61,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 
 /*ORDER - CONTACT*/
 #contact-bg {
-    background-image: url(images/contact-bg.jpg);
+    background-image: url(img/contact-bg.jpg);
     background-size: cover;
     width: 100%;
 }
@@ -182,7 +182,7 @@ span {
 /*GALLERY GRUB*/
 
 #menu-bg {
-    background-image: url(images/menu-bg.jpg);
+    background-image: url(img/menu-bg.jpg);
     background-size: cover;
     width: 100%;
 }
