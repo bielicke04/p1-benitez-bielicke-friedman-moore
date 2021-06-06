@@ -247,6 +247,10 @@ p {
     width: 100%;
   }
 
+  .container-fluid {
+    margin-top: 50px;
+}
+
 /************* H1 *************/
 
   #starburst {
@@ -255,7 +259,7 @@ p {
 
   .stop-by, .submit-order {
     color: @pyellow;
-    font-size: 2em;
+    font-size: 4em;
     font-family: 'SpongebobFont', sans-serif;
     text-shadow: 8px 8px 8px @textshadow1;
     justify-content: center;
@@ -271,6 +275,17 @@ p {
     text-align: center;
     display: flex;
     flex-direction: column;
+  }
+
+  h1.submit-order {
+    font-size: 4.25rem;
+    margin-left: -2%;
+    text-shadow: 8px 8px 8px @boxshadow1;
+  }
+
+  h1.stop-by {
+    font-size: 4.25rem;
+    text-shadow: 8px 8px 8px @boxshadow1;
   }
 
   .left-order {
@@ -321,6 +336,7 @@ p {
       display: inline-block;
       vertical-align: middle;
       margin-bottom: 30px;
+      width: 100%;
   }
 
 
@@ -333,24 +349,18 @@ p {
     color: @pyellow;
   }
 
-  /*.address p {
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: .9em;
-      text-shadow: 4px 4px 4px #00000042;
-      color: @white;
-      margin-bottom: 0;
-  }*/
 
   .address {
       display: block;
       margin-top: -10px;
-      p {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: .9em;
-        text-shadow: 4px 4px 4px @textshadow1;
-        color: @white;
-        margin-bottom: 0;
-      }
+  }
+
+  .address p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3em;
+    text-shadow: 4px 4px 4px @textshadow1;
+    color: @white;
+    margin-bottom: 0;
   }
 
   /************* GALLERY GRUB *************/
@@ -385,33 +395,22 @@ p {
 
   .pretty-patty-text {
       text-align: center;
-      h3 {
-        font-family: 'Source Sans Pro', sans-serif;
-        color: @white;
-        font-size: .5em;
-        text-shadow: 4px 4px 4px @textshadow1;
     }
-    h5 {
-      font-family: 'Source Sans Pro', sans-serif;
-      color: @white;
-      font-size: .4em;
-      text-shadow: 4px 4px 4px @textshadow1;
-    }
-  }
+    
 
-  /*.pretty-patty-text h3 {
-      font-family: 'Source Sans Pro', sans-serif;
-      color: @white;
-      font-size: .5em;
-      text-shadow: 4px 4px 4px #00000042;
+  .pretty-patty-text h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: @white;
+    font-size: .5em;
+    text-shadow: 4px 4px 4px @textshadow1;
   }
 
   .pretty-patty-text h5 {
-      font-family: 'Source Sans Pro', sans-serif;
-      color: @white;
-      font-size: .4em;
-      text-shadow: 4px 4px 4px #00000042;
-  }*/
+    font-family: 'Source Sans Pro', sans-serif;
+    color: @white;
+    font-size: .4em;
+    text-shadow: 4px 4px 4px @textshadow1;
+  }
 
   .menu-img {
       display: flex;
@@ -467,20 +466,18 @@ p {
     font-size: 14px;
     margin-bottom: 0;
     color: @white;
-    a {
-      color:inherit;
-      text-decoration:none;
-      opacity:0.5;
-      color: @white;
-      font-family: 'SourceSansRegular';
     }
+
+  ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.5;
+    color: @white;
+    font-family: 'SourceSansRegular';
   }
 
   .item.text {
     margin-bottom:36px;
-    .item.text p {
-      margin-bottom:0;
-    }
   }
 
   .item.text p {
@@ -543,7 +540,8 @@ p {
 }
 
 
-/*=============Media Query===================*/
+/*=============Media Queries===================*/
+
 
 /************* Media Query 1200px *************/
 
@@ -570,6 +568,7 @@ p {
   width: 90%;
   }
 }
+
 
 /************* Media Query 1000px *************/
 
@@ -624,6 +623,7 @@ p {
     margin: 3% 0 -50px 0;
   }
 }
+
 
 /************* Media Query 840px *************/
 
@@ -760,6 +760,7 @@ p {
   }
 }
 
+
 /************* Media Query 570px *************/
 
   @media (max-width:570px) {
@@ -816,8 +817,6 @@ p {
       margin: -50px 0 -50px 0;
     }
   }
-
-  /************* Media Query 500px *************/
 
    @media (max-width:500px) {
 
@@ -888,4 +887,377 @@ p {
     }
   }
 
-    /************* END Media Queries *************/
+/************* Jennifer Media Queries *************/
+
+
+@media (min-width: 380px) {
+  .menu-text {
+      margin-top: 0;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 500px){
+  
+  .menu-text {
+      font-size: 1rem;
+  }
+
+  .pretty-patty-text h3 {
+      font-size: .9em;
+  }
+  
+  .pretty-patty-text h5 {
+      font-size: .8em;
+  }
+
+}
+
+@media (min-width: 425px) and (max-width: 500px) {
+  .gallery-grub-text, .stop-by, .submit-order {
+      font-size: 2.5em;
+  }
+
+  .or {
+      font-size: 2em;
+  }
+
+  address p {
+      font-size: 1em;
+  }
+
+  .contact-arrow {
+      width: 15%;
+      margin-top: -20px;
+  }
+
+  .pretty-patty-text h3 {
+      font-size: 1em;
+  }
+  
+  .pretty-patty-text h5 {
+      font-size: .9em;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  
+  .form-control::placeholder {
+      font-size: 1em;
+  }
+  
+  input {
+      font-size: 1em;
+  }
+
+  .lets-eat-btn {
+      font-size: 1.2em;
+  }
+
+  .gallery-grub-text, .stop-by, .submit-order {
+      font-size: 3em;
+  }
+  
+  .or {
+      font-size: 2.5em;
+  }
+
+  .menu-text {
+      font-size: 1.2em;
+  }
+
+  .pretty-patty-text h3 {
+      font-size: 1em;
+  }
+  
+  .pretty-patty-text h5 {
+      font-size: .9em;
+  }
+
+  .address p {
+      font-size: 1.2em;
+  }
+
+  .contact-arrow {
+      width: 15%;
+      margin-top: -20px;
+  }
+}
+
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .gallery-grub-text, .stop-by, .submit-order {
+      font-size: 3.5em;
+  }
+
+  .or {
+      font-size: 3em;
+  }
+  
+  .menu-text {
+      font-size: 1.5em;
+      padding-top: 0;
+  }
+
+  .pretty-patty-text h3 {
+      font-size: .8em;
+  }
+  
+  .pretty-patty-text h5 {
+      font-size: .7em;
+  }
+
+  .form-control::placeholder {
+      font-size: 1.2em;
+  }
+  
+  input {
+      font-size: 1.2em;
+  }
+
+  .lets-eat-btn {
+      font-size: 1.5em;
+  }
+
+  .address p {
+      font-size: 1.2em;
+  }
+
+  .contact-arrow {
+      width: 15%;
+      margin-top: -30px;
+  }
+}
+
+
+
+@media (min-width: 700px){
+
+  .map-img{
+      width: 100%;
+  }
+}
+
+  @media (min-width: 768px) and (max-width: 950px) {
+  
+
+  .menu-text {
+       font-size: 1.2em;
+  }
+
+  .menu-arrow {
+      width: 50%;
+      margin-top: -25px
+  }
+
+  .pretty-patty-text h3 {
+      font-size: .8em;
+  }
+      
+  .pretty-patty-text h5 {
+      font-size: .7em;
+  }
+
+}
+
+
+@media (min-width: 768px) {
+  .menu-img {
+      width: 65%;
+  }
+
+  .menu-arrow {
+      width: 50%;
+      justify-content: flex-end;
+  }
+
+  .menu-img:hover {
+      transform: scale(1.2);
+      border-radius: 50%;
+      box-shadow: 0 0px 90px #f26422, #f2642269 -20px -20px 30px 100px inset;
+      z-index: 1;
+  }
+
+  .lets-eat-btn:hover{
+      color: white;
+      background-color: #2d5483;
+  }
+
+  form {
+      margin-left: 30px;
+  }
+
+  
+  .h1-order {
+      display: flex;
+      flex-direction: row;
+  }
+
+  .stop-by {
+      margin: 0 25px 0 auto;
+  }
+
+  .submit-order {
+      margin: 0 auto 0 25px;
+  }
+  
+
+  .contact-arrow {
+      overflow: hidden;
+      margin-top: 10px;
+  }
+
+  .stop-by, .submit-order {
+      font-size: 2em;
+  }
+
+  
+  .or {
+      transform: rotate(-10deg);
+      font-size: 1.5em;
+      z-index: 2;
+      position: relative;
+      color: white;
+      font-family: 'SpongebobFont', sans-serif;
+      text-shadow: 8px 8px 8px #00000042;
+      margin-bottom: 0;
+  }
+  
+  .starburst-img {
+      z-index: 1;
+      position: absolute;
+      /*width: 50%;*/
+  }
+  
+  
+  #starburst {
+      display: flex;
+      margin: 0 auto auto auto;   
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 150px;
+  }
+}
+
+@media (min-width: 950px) {
+  .stop-by {
+      margin: 0 0 0 auto;
+  }
+  
+  .submit-order {
+      margin: 0 auto 0 0;
+  }
+}
+
+
+@media (min-width: 950px) and (max-width: 1020px) {
+  .stop-by, .submit-order {
+      font-size: 2.7em;
+  }
+
+  .or {
+      font-size: 2.2em;
+  }
+
+  .contact-arrow {
+      margin-top: 20px;
+  }
+
+}
+
+
+@media (min-width: 1020px) and (max-width: 1320px) {
+  .stop-by, .submit-order {
+      font-size: 3em;
+  }
+
+  .or {
+      font-size: 2.5em;
+  }
+
+}
+
+@media (min-width:950px) {
+  .contact-arrow {
+      margin-top: 30px;
+  }
+}
+
+
+@media (min-width: 951px) and (max-width: 1320px) {
+  .gallery-grub-text {
+      font-size: 3.5em;
+  }
+      
+  .menu-text {
+      font-size: 1.5em;
+  }
+
+  .menu-arrow {
+      width: 50%;
+      position: relative;
+      margin-top: -30px
+  }
+
+  .pretty-patty-text h3 {
+      font-size: .9em;
+  }
+      
+  .pretty-patty-text h5 {
+      font-size: .8em;
+  }
+}
+
+
+
+
+@media (min-width: 1300px) {
+
+  .gallery-grub-text {
+      font-size: 4em;
+  }    
+
+}
+
+
+@media (min-width: 1320px) {
+  .stop-by, .submit-order {
+      font-size: 4em;
+  }    
+
+  .stop-by, .submit-order {
+      font-size: 4em;
+  }
+
+  .or {
+      font-size: 3.5em;
+  }
+      
+  input {
+      font-size: 1em;
+  }
+
+  .lets-eat-btn {
+      font-size: 1.5em;
+  }
+          
+  .address p {
+      font-size: 1.5em;
+  }
+
+  .contact-arrow {
+      width: 15%;
+      height: 15%;
+  }
+  
+  .form-control::placeholder {
+      font-size: 1.2em;
+  }
+
+}
+
+  /************* END Media Queries *************/
