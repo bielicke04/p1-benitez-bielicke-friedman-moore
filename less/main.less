@@ -239,7 +239,206 @@ p {
   margin-top: 6px;
 }
 
-/*=====================================================Footer===================*/
+/************* ORDER - CONTACT *************/
+
+  #contact-bg {
+    background-image: url(images/contact.jpg);
+    background-size: cover;
+    width: 100%;
+  }
+
+/************* H1 *************/
+
+  #starburst {
+    display: none;
+  }
+
+  .stop-by, .submit-order {
+    color: @pyellow;
+    font-size: 2em;
+    font-family: 'SpongebobFont', sans-serif;
+    text-shadow: 8px 8px 8px @textshadow1;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    align-content: center;
+  }
+
+  .h1-order {
+    margin: 0;
+    padding: 150px 0 0 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-order {
+    flex-direction: column-reverse;
+  }
+
+/************* ARROWS *************/
+
+  .contact-arrow {
+    width: 15%;
+    margin-top: -15px;
+  }
+
+  .right-arrow {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .left-arrow {
+    display: flex;
+    align-self: flex-start;
+  }
+
+  /************* FORM *************/
+
+  .form-control::placeholder {
+    font-family: 'SpongebobFont', sans-serif;
+    font-size: .9em;
+    color: @porange;
+  }
+
+  input {
+      font-size: .9em;
+      box-shadow: 0 4px 8px 0 @boxshadow1, 0 6px 20px 0 @boxshadow2;
+  }
+
+  textarea {
+      box-shadow: 0 0 8px 0 @boxshadow1, 0 0 20px 0 @boxshadow2;
+  }
+
+  .lets-eat-btn {
+      font-family: 'SpongebobFont', sans-serif;
+      background-color: @porange;
+      color: @white;
+      font-size: 1em;
+      box-shadow: 0 4px 8px 0 @boxshadow1, 0 6px 20px 0 @boxshadow2;
+      border: 2px solid @white;
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 30px;
+  }
+
+
+  .map-img {
+      width: 90%;  
+      margin-bottom: 20px;
+  }
+
+  span {
+    color: @pyellow;
+  }
+
+  /*.address p {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: .9em;
+      text-shadow: 4px 4px 4px #00000042;
+      color: @white;
+      margin-bottom: 0;
+  }*/
+
+  .address {
+      display: block;
+      margin-top: -10px;
+      p {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: .9em;
+        text-shadow: 4px 4px 4px @textshadow1;
+        color: @white;
+        margin-bottom: 0;
+      }
+  }
+
+  /************* GALLERY GRUB *************/
+
+  #menu-bg {
+    background-image: url(images/Menu.jpg);
+    background-size: cover;
+    width: 100%;
+  }
+
+  /************* H1 *************/
+
+  .gallery-grub-text {
+    font-family: 'SpongebobFont', sans-serif;
+    color: @white;
+    font-size: 2em;
+    padding-top: 150px;
+    text-shadow: 4px 4px 8px @textshadow1;
+    text-align: center;
+  }
+
+  /************* MENU *************/
+
+  .menu-text {
+    font-family: 'SpongebobFont', sans-serif;
+    color: @white;
+    font-size: .9em;
+    text-align: center;
+    text-shadow: 4px 4px 4px @textshadow1;
+    margin-top: 10px;
+  }
+
+  .pretty-patty-text {
+      text-align: center;
+      h3 {
+        font-family: 'Source Sans Pro', sans-serif;
+        color: @white;
+        font-size: .5em;
+        text-shadow: 4px 4px 4px @textshadow1;
+    }
+    h5 {
+      font-family: 'Source Sans Pro', sans-serif;
+      color: @white;
+      font-size: .4em;
+      text-shadow: 4px 4px 4px @textshadow1;
+    }
+  }
+
+  /*.pretty-patty-text h3 {
+      font-family: 'Source Sans Pro', sans-serif;
+      color: @white;
+      font-size: .5em;
+      text-shadow: 4px 4px 4px #00000042;
+  }
+
+  .pretty-patty-text h5 {
+      font-family: 'Source Sans Pro', sans-serif;
+      color: @white;
+      font-size: .4em;
+      text-shadow: 4px 4px 4px #00000042;
+  }*/
+
+  .menu-img {
+      display: flex;
+      margin: auto;
+      width: 50%;
+  }
+
+  .menu {
+      padding: 30px 0;
+  }
+
+  .menu-arrow {
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
+      width: 40%;
+      position: relative;
+      margin-top: -40px
+  }
+
+  #menu-arrow {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+  }
+
+/*==================Footer===================*/
 
   .footer-dark {
     padding:50px 0;
@@ -344,7 +543,7 @@ p {
 }
 
 
-/*=====================================================Media Query===================*/
+/*=============Media Query===================*/
 
 /************* Media Query 1200px *************/
 
