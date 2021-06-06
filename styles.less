@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./mixins";
+
 * {
 	margin: 0;
 	padding: 0;
@@ -42,7 +45,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 
   .navbar-nav a {
     font-family: 'SourceSansLight', 'Sans-Serif';
-    color: #fff;
+    color: @white;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -50,7 +53,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 
   .navbar-nav a:hover {
     font-family: 'SourceSansRegular', 'Sans-Serif';
-    color: #f26522;
+    color: @porange;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -61,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 
 /*ORDER - CONTACT*/
 #contact-bg {
-    background-image: url(img/contact-bg.jpg);
+    background-image: url(images/contact.jpg);
     background-size: cover;
     width: 100%;
 }
@@ -74,7 +77,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 }
 
 .stop-by, .submit-order {
-    color: #fff000;
+    color: @pyellow;
     font-size: 2em;
     font-family: 'SpongebobFont', sans-serif;
     text-shadow: 8px 8px 8px #00000042;
@@ -120,7 +123,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 .form-control::placeholder {
     font-family: 'SpongebobFont', sans-serif;
     font-size: .9em;
-    color: #F26522;
+    color: @porange;
 }
 
 input {
@@ -134,11 +137,11 @@ textarea {
 
 .lets-eat-btn {
     font-family: 'SpongebobFont', sans-serif;
-    background-color: #F26522;
-    color: white;
+    background-color: @porange;
+    color: @white;
     font-size: 1em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: 2px solid white;
+    border: 2px solid @white;
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 30px;
@@ -155,16 +158,17 @@ textarea {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: .9em;
     text-shadow: 4px 4px 4px #00000042;
-    color: white;
+    color: @white;
     margin-bottom: 0;
 }
 
 span {
-    color: #fff000;
+    color: @pyellow;
 }
 
 .address {
     display: block;
+    margin-top: -10px;
 }
 
 
@@ -181,7 +185,7 @@ span {
 /*GALLERY GRUB*/
 
 #menu-bg {
-    background-image: url(img/menu-bg.jpg);
+    background-image: url(images/Menu.jpg);
     background-size: cover;
     width: 100%;
 }
@@ -189,7 +193,7 @@ span {
 /*H1*/
 .gallery-grub-text {
     font-family: 'SpongebobFont', sans-serif;
-    color: white;
+    color: @white;
     font-size: 2em;
     padding-top: 150px;
     text-shadow: 4px 4px 8px #00000042;
@@ -199,7 +203,7 @@ span {
 /*MENU*/
 .menu-text {
     font-family: 'SpongebobFont', sans-serif;
-    color: white;
+    color: @white;
     font-size: .9em;
     text-align: center;
     text-shadow: 4px 4px 4px #00000042;
@@ -212,14 +216,14 @@ span {
 
 .pretty-patty-text h3 {
     font-family: 'Source Sans Pro', sans-serif;
-    color: white;
+    color: @white;
     font-size: .5em;
     text-shadow: 4px 4px 4px #00000042;
 }
 
 .pretty-patty-text h5 {
     font-family: 'Source Sans Pro', sans-serif;
-    color: white;
+    color: @white;
     font-size: .4em;
     text-shadow: 4px 4px 4px #00000042;
 }
@@ -261,67 +265,66 @@ span {
 
 .footer-dark {
     padding:50px 0;
-    background: #1d7ea6;
-    background: linear-gradient(180deg, #1d7ea6 36%, #081e41 84%);
+    background: @dblue;
+    background: linear-gradient(180deg, @dblue 36%, @pdarkblue 84%);
     height: 50vh;
-}
-
-.footer-dark h3 {
+  
+    h3 {
       margin-top:0;
       margin-bottom: 12px;
       font-weight: bold;
       font-size: 18px;
-      color: #081e41;
+      color: @pdarkblue;
       letter-spacing: 1.5px;
-}
+    }
   
-.footer-dark p {
-      color: #fff;
+    p {
+      color: @white;
       opacity:0.5;
-}
+    }
   
-.footer-dark ul {
+    ul {
       padding: 0;
       list-style: none;
       line-height: 1.6;
       font-size: 14px;
       margin-bottom: 0;
-      color: #fff;
-}
-
-.footer-dark a {
+      color: @white;
+      a {
         color:inherit;
         text-decoration:none;
         opacity:0.5;
-        color: #fff;
+        color: @white;
         font-family: 'SourceSansRegular';
-}
+      }
+    }
   
-.item.text {
-    margin-bottom:36px;
-}
+    .item.text {
+      margin-bottom:36px;
+    }
   
-.item.text p {
-    margin-bottom:0;
-}
+    .item.text p {
+      margin-bottom:0;
+    }
   
-.item.social {
-    text-align:center;
-}
+    .item.social {
+      text-align:center;
+    }
   
-.copyright {
-    text-align:center;
-    padding-top:24px;
-    opacity:0.3;
-    font-size:13px;
-    margin-bottom:0;
-    color: #fff;
+    .copyright {
+      text-align:center;
+      padding-top:24px;
+      opacity:0.3;
+      font-size:13px;
+      margin-bottom:0;
+      color: @white;
+    }
   }
   
-.footer-dark ul a:hover {
+  .footer-dark ul a:hover {
     opacity:0.8;
-    color: #f26522;
-}
+    color: @porange;
+  }
   
   @media (max-width:767px) {
     .footer-dark .item:not(.social) {
@@ -351,14 +354,13 @@ span {
     display:inline-block;
     text-align:center;
     margin:0 8px;
-    color: #fff;
+    color: @white;
     opacity:0.6;
   }
   
   .footer-dark .item.social > a:hover {
     opacity:0.9;
   }
-
 
 
 
@@ -454,7 +456,7 @@ span {
 
     .contact-arrow {
         width: 15%;
-        margin-top: -30px;
+        margin-top: -20px;
     }
 }
 
@@ -503,20 +505,22 @@ span {
 
     .contact-arrow {
         width: 15%;
-        margin-top: -40px;
+        margin-top: -30px;
     }
 }
 
 
 
 @media (min-width: 700px){
+  
     .map-img{
         width: 100%;
     }
 }
 
-@media (min-width: 768px) and (max-width: 950px) {
+    @media (min-width: 768px) and (max-width: 950px) {
     
+
     .menu-text {
          font-size: 1.2em;
     }
@@ -550,13 +554,13 @@ span {
     .menu-img:hover {
         transform: scale(1.2);
         border-radius: 50%;
-        box-shadow: 0 0px 90px #f26422, #f2642269 -20px -20px 30px 100px inset;
+        box-shadow: 0 0px 90px @porange, @dorange -20px -20px 30px 100px inset;
         z-index: 1;
     }
 
     .lets-eat-btn:hover{
-        color: white;
-        background-color: #2d5483;
+        color: @white;
+        background-color: @sdarkblue;
     }
 
     form {
@@ -577,6 +581,7 @@ span {
         margin: 0 auto 0 25px;
     }
     
+
     .contact-arrow {
         overflow: hidden;
         margin-top: 10px;
@@ -585,13 +590,14 @@ span {
     .stop-by, .submit-order {
         font-size: 2em;
     }
- 
+
+    
     .or {
         transform: rotate(-10deg);
         font-size: 1.5em;
         z-index: 2;
         position: relative;
-        color: white;
+        color: @white;
         font-family: 'SpongebobFont', sans-serif;
         text-shadow: 8px 8px 8px #00000042;
         margin-bottom: 0;
@@ -611,7 +617,7 @@ span {
         justify-content: center;
         align-items: center;
         padding-top: 150px;
-}
+    }
 }
 
 @media (min-width: 950px) {
@@ -641,6 +647,7 @@ span {
     .address p {
         font-size: 1em;
     }
+
 
 }
 
@@ -688,6 +695,8 @@ span {
 }
 
 
+
+
 @media (min-width: 1300px) {
 
     .gallery-grub-text {
@@ -730,4 +739,6 @@ span {
     .form-control::placeholder {
         font-size: 1.2em;
     }
+
+
 }
